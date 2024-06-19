@@ -20,7 +20,6 @@ export default defineConfig({
           }
         },
       },
-      chunkSizeWarningLimit: 1000, // Increase chunk size warning limit
     },
   },
   plugins: [react()],
