@@ -62,8 +62,8 @@ export default function UpdateListing() {
                     {
                         promises.push(storeImage(files[i]));
                     }
-                    Promise.all(promises).then((urls)=>{
-                        setformData({...formData, imageUrls: formData.imageUrls.concat(urls), imageUrls});
+                    Promise.all(promises).then((urls) => {
+                        setformData({ ...formData, imageUrls: formData.imageUrls.concat(urls) }); 
                         setImageUploadError(false);
                         setuploading(false)
                     }).catch ((err)=>{
@@ -72,7 +72,7 @@ export default function UpdateListing() {
                     }
 
                     );
-
+                    
 
             }else
             {
@@ -90,7 +90,7 @@ export default function UpdateListing() {
                         const uploadTask = uploadBytesResumable(storageRef , file);
                         uploadTask.on
                         (
-                            "state_changet",
+                            "state_changed",
                             (snapshot)=>
                                 {
                                     const progress = (snapshot.bytesTransferred / snapshot.totalBytes)*100;
