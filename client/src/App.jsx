@@ -10,7 +10,6 @@ import CreateListing from "./pages/CreateListing";
 import UpdateListing from "./pages/UpdateListing";
 import Listing from "./pages/Listing";
 import Search from "./pages/Search";
-import VideoPlayer from "../../video";;
 
 
 export default function App() {
@@ -18,14 +17,12 @@ export default function App() {
     <BrowserRouter>
       <Header/>
         <Routes>
-          <Route path="/home" element={<Home/>}></Route>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/signin" element={<Signin/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/about" element={<About/>}></Route> 
           <Route path="/search" element={<Search/>}></Route>
           <Route path="/listing/:listingid" element={<Listing/>}/>
-          <Route path="/video" element={<VideoPlayer/>}/>
           <Route element={<PrivateRoute/>}>
               <Route path="/profile" element={<Profile/>}></Route>
               <Route path="/create-listing" element={<CreateListing/>}></Route>
